@@ -1,17 +1,8 @@
-"""
-You need to write code to plot the graphs as required in task2 of the problem statement:
-    - You can edit any code in this file but be careful when modifying the simulation specific code. 
-    - The simulation framework as well as the BernoulliBandit implementation for this task have been separated from the rest of the assignment code and is contained solely in this file. This will be useful in case you would like to collect more information from runs rather than just regret.
-"""
-
 import numpy as np
 from multiprocessing import Pool
 from task1 import Eps_Greedy, UCB, KL_UCB
 import matplotlib.pyplot as plt
 import time
-# START EDITING HERE
-# You can use this space to define any helper functions that you need.
-# END EDITING HERE
 
 class BernoulliArmTask2:
   def __init__(self, p):
@@ -77,12 +68,6 @@ def task2(algorithm, horizon, p1s, p2s, num_sims=50):
     return regrets
 
 if __name__ == '__main__':
-  # EXAMPLE CODE
-  # task2p1s = [0.2, 0.3]
-  # task2p2s = [0.1, 0.2]
-  # regrets = task2(Eps_Greedy, 1000, task2p1s, task2p2s, 1)
-  
-  # INSERT YOUR CODE FOR PLOTTING HERE
   task2p1s = 0.9
 
   task2p2s = np.arange(0.0, 0.95, 0.05)
